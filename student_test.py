@@ -3,8 +3,8 @@ import student
 
 
 
-def test_jump():
-    input_values=['jump']
+def test_default():
+    input_values=['18.314159f']
     output=[]
 
     def mock_input(s=None):
@@ -20,10 +20,10 @@ def test_jump():
 
     student.main()
 
-    assert output[1]=='jumping'
-
-def test_eat():
-    input_values=['eat']
+    assert '2.6163084285714' in output[1]
+    
+def test_simple():
+    input_values=['7.7f']
     output=[]
 
     def mock_input(s=None):
@@ -39,10 +39,10 @@ def test_eat():
 
     student.main()
 
-    assert output[1]=='eating'    
+    assert '1.1' in output[1]
 
-def test_scarps():
-    input_values=['scarp']
+def test_simple_two():
+    input_values=['14.7f']
     output=[]
 
     def mock_input(s=None):
@@ -58,9 +58,11 @@ def test_scarps():
 
     student.main()
 
-    assert output[1]=='scarping'
-def test_groundbreak():
-    input_values=['groundbreak']
+    assert '2.1' in output[1]
+
+    
+def test_simple_three():
+    input_values=['21.14f']
     output=[]
 
     def mock_input(s=None):
@@ -76,4 +78,6 @@ def test_groundbreak():
 
     student.main()
 
-    assert output[1]=='groundbreaking'
+    assert '3.02' in output[1]
+
+
